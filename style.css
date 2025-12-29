@@ -308,3 +308,34 @@ body {
     background-position: center center; 
   }
 }
+
+.site-footer {
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: 40px;
+  background: linear-gradient(90deg, #4ECDC4, #FF6B6B);
+  color: white;
+  font-size: 14px;
+  border-radius: 10px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.site-footer:hover {
+  transform: translateY(-3px);
+}
+
+.site-footer a {
+  color: #FFE66D;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.site-footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
