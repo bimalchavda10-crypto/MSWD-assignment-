@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Food in Anjar</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .food-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap:30px; max-width:1100px; margin:40px auto; }
+    .food-card { backdrop-filter: blur(14px); background: rgba(255,255,255,0.18); border-radius:18px; padding:20px; box-shadow:0 8px 30px rgba(0,0,0,0.25); color: #0a0a0a; transition: transform 0.3s, box-shadow 0.3s; text-align:center; }
+    .food-card:hover { transform: translateY(-10px); box-shadow:0 12px 40px rgba(0,0,0,0.4); }
+    .food-card img { width:100%; height:180px; object-fit:cover; border-radius:14px; margin-bottom:15px; }
+    .btn-map { display:inline-block; padding:10px 25px; margin-top:10px; background:linear-gradient(90deg,#FF6B6B,#FFE66D); color:white; font-weight:bold; border-radius:25px; text-decoration:none; transition:0.3s; }
+    .btn-map:hover { transform:scale(1.05); background:linear-gradient(90deg,#4ECDC4,#FF6B6B); }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="menu-btn">☰</div>
+  <div class="logo">Anjar Travel</div>
+</header>
+
+<div class="side-menu" id="menu">
+  <a href="index.html">Home</a>
+  <a href="places.html">Places</a>
+  <a href="bestfood.html">Best Food</a>
+  <a href="gallery.html">Gallery</a>
+</div>
+
+<section class="glass-section">
+  <h2 class="glass-title">Best Food in Anjar</h2>
+  <div class="food-grid">
+
+    <div class="food-card">
+      <img src="images/toral_sarovar.jpg" alt="Toral Sarovar">
+      <h3>Toral Sarovar</h3>
+      <p>Popular for traditional Kutchi snacks and sweets. Great for breakfast and snacks.</p>
+      <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=Toral+Sarovar+Anjar+Gujarat+370110" target="_blank">Go to Map</a>
+    </div>
+
+    <div class="food-card">
+      <img src="images/hk_pizzaria.jpg" alt="HK Pizzaria">
+      <h3>HK Pizzaria</h3>
+      <p>Known for delicious pizzas, burgers, and fast food for all ages.</p>
+      <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=HK+Pizzaria+Anjar+Gujarat+370110" target="_blank">Go to Map</a>
+    </div>
+
+    <div class="food-card">
+      <img src="images/chocolate_room.jpg" alt="Chocolate Room">
+      <h3>Chocolate Room</h3>
+      <p>Coffee, chocolate desserts, and snacks. A cozy spot for kids and families.</p>
+      <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=Chocolate+Room+Anjar+Gujarat+370110" target="_blank">Go to Map</a>
+    </div>
+
+    <div class="food-card">
+      <img src="images/dosa_plaza.jpg" alt="Dosa Plaza">
+      <h3>Dosa Plaza</h3>
+      <p>South Indian delicacies with a variety of dosas, uttapams, and chutneys.</p>
+      <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=Dosa+Plaza+Anjar+Gujarat+370110" target="_blank">Go to Map</a>
+    </div>
+
+    <div class="food-card">
+      <img src="images/ramu_dosa.jpg" alt="Ramu Dosa">
+      <h3>Ramu Dosa</h3>
+      <p>Famous for crispy dosas and flavorful traditional fillings at affordable prices.</p>
+      <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=Ramu+Dosa+Anjar+Gujarat+370110" target="_blank">Go to Map</a>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const menu = document.getElementById("menu");
+  const menuBtn = document.querySelector(".menu-btn");
+  menuBtn.addEventListener("click",(e)=>{e.stopPropagation();menu.classList.toggle("open");});
+  document.addEventListener("click",(e)=>{if(!menu.contains(e.target)&&!menuBtn.contains(e.target)){menu.classList.remove("open");}});
+  menu.addEventListener("click",(e)=>e.stopPropagation());
+</script>
+
+<div class="site-footer">
+  <p>Made by <strong>Bimal Chavda</strong> | <a href="https://instagram.com/chavda_bimal_5060_" target="_blank">Instagram</a></p>
+</div>
+
+</body>
+</html>
